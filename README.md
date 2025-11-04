@@ -290,6 +290,22 @@ Se implementaron controladores, servicios y repositorios para manejar la lógica
 
 En resumen, el proyecto consolida un monolito funcional y seguro que expone servicios REST para la gestión de usuarios y publicaciones, junto con un frontend ligero para visualizar y crear posts en tiempo real.
 
+# pruebas fotos:
+
+<img width="598" height="271" alt="image" src="https://github.com/user-attachments/assets/8cfc5ab5-19af-46fb-8bca-571bd97e5276" />
+<img width="595" height="292" alt="image" src="https://github.com/user-attachments/assets/1220c11b-80cd-4a46-833b-45245a05b5d4" />
+<img width="596" height="308" alt="image" src="https://github.com/user-attachments/assets/5b6fae41-b48a-41df-b43d-b1b67ff7888c" />
+<img width="581" height="396" alt="image" src="https://github.com/user-attachments/assets/afde5dd6-56b1-4bda-99fe-e726e8c32f56" />
+<img width="591" height="390" alt="image" src="https://github.com/user-attachments/assets/13548341-7f9e-4c83-9e97-96d149abe34f" />
+<img width="603" height="228" alt="image" src="https://github.com/user-attachments/assets/2355b125-dbcc-4834-bdb2-7feeed1a2fc1" />
+<img width="588" height="321" alt="image" src="https://github.com/user-attachments/assets/95d5ea10-a669-4ca8-9a6a-3c493fa7d8ae" />
+<img width="613" height="290" alt="image" src="https://github.com/user-attachments/assets/07efdfea-c51a-4a6c-a116-fb5db9b0a519" />
+
+
+
+
+
+
 👨‍💻 Autor
 Agustin Santiago
 📧 agsantiago030102@outlook.com
