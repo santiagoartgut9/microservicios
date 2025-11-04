@@ -1,0 +1,37 @@
+service: streamapp-user-service
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  environment:
+    COGNITO_USER_POOL_ID: ${env:COGNITO_USER_POOL_ID}
+
+plugins:
+  - serverless-offline
+
+functions:
+  users:
+    handler: handler.handler
+    events:
+      - http:
+          path: users/me
+          method: get
+          cors: true
+      - http:
+          path: users/{proxy+}
+          method: options
+          cors: true
+
+resources:
+  Resources:
+    GatewayResponse:
+      Type: AWS::ApiGateway::GatewayResponse
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: DEFAULT_4XX
+        RestApiId:
+          Ref: ApiGatewayRestApi
