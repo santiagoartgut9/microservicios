@@ -274,46 +274,21 @@ pruebas fotos:
 └───target/
         (archivos generados al compilar)
 ```
-🔧 Desarrollo local
-Ejecutar con Serverless Offline
-bash
-# En cada servicio
-serverless offline
+🧩 Descripción del desarrollo
 
-# O con modo watch
-serverless offline start
-Variables de entorno para desarrollo
-bash
-# Crear archivo .env en cada servicio
-COGNITO_USER_POOL_ID=us-east-1_xxxxxxxxx
-COGNITO_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxx
-POSTS_TABLE=streamapp-posts-dev
-Estructura de un post en DynamoDB
-json
-{
-  "id": "1234567890",
-  "contenido": "Este es mi primer post en StreamApp!",
-  "autor": "usuario@ejemplo.com",
-  "createdAt": "2024-01-01T12:00:00.000Z",
-  "updatedAt": "2024-01-01T12:00:00.000Z"
-}
-🎯 Próximas características
-Likes y reacciones a posts
+Para este proyecto se diseñó e implementó una API REST utilizando Spring Boot, que permite a los usuarios registrarse, autenticarse y publicar mensajes cortos (de hasta 140 caracteres), simulando el comportamiento de una red social tipo Twitter.
 
-Sistema de seguidores
+El sistema se desarrolló bajo una arquitectura monolítica estructurada en capas, con las siguientes entidades principales:
 
-Notificaciones en tiempo real
+Usuario: gestiona la información y credenciales de los usuarios.
 
-Búsqueda de posts y usuarios
+Hilo (Stream): representa el flujo general donde se agrupan los posts.
 
-Edición y eliminación de posts
+Post: almacena los mensajes creados por los usuarios.
 
-Subida de imágenes
+Se implementaron controladores, servicios y repositorios para manejar la lógica de negocio, junto con seguridad basada en JWT para la autenticación. Además, se desarrolló una interfaz web con HTML, CSS y JavaScript para consumir el API y permitir la interacción con los usuarios desde el navegador.
 
-Modo oscuro
-
-📄 Licencia
-Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
+En resumen, el proyecto consolida un monolito funcional y seguro que expone servicios REST para la gestión de usuarios y publicaciones, junto con un frontend ligero para visualizar y crear posts en tiempo real.
 
 👨‍💻 Autor
 Agustin Santiago
