@@ -1,37 +1,44 @@
-https://img.shields.io/badge/Java-21-orange
-https://img.shields.io/badge/Spring%2520Boot-3.3.2-brightgreen
-https://img.shields.io/badge/AWS-Lambda-orange
-https://img.shields.io/badge/API-Gateway-yellow
-https://img.shields.io/badge/Auth-Cognito-blue
-https://img.shields.io/badge/DB-DynamoDB-green
-https://img.shields.io/badge/Deployment-Serverless-Fiolet
-https://img.shields.io/badge/License-MIT-blue
+
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.2-brightgreen)
+![Spring Security](https://img.shields.io/badge/Spring%20Security-Enabled-success)
+![JWT](https://img.shields.io/badge/Auth-JWT-green)
+![BCrypt](https://img.shields.io/badge/Encryption-BCrypt-lightgrey)
+![REST API](https://img.shields.io/badge/API-REST-blue)
+![Maven](https://img.shields.io/badge/Build-Maven-red)
+![H2 Database](https://img.shields.io/badge/Database-H2-lightblue)
+![HTML5](https://img.shields.io/badge/Frontend-HTML5-red)
+![CSS3](https://img.shields.io/badge/Style-CSS3-blue)
+![JavaScript](https://img.shields.io/badge/Frontend-JavaScript-yellow)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
+![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-orange)
+![Serverless Framework](https://img.shields.io/badge/Framework-Serverless-red)
+![Amazon API Gateway](https://img.shields.io/badge/AWS-API%20Gateway-yellow)
+![Amazon Cognito](https://img.shields.io/badge/Auth-AWS%20Cognito-blueviolet)
+![Amazon DynamoDB](https://img.shields.io/badge/Database-DynamoDB-blue)
+![Amazon S3](https://img.shields.io/badge/Storage-Amazon%20S3-lightblue)
+
+
+
 
 # 🚀 StreamApp - Microservicios con AWS Lambda y Serverless
 Este proyecto implementa una aplicación de red social tipo "Stream" utilizando una arquitectura de microservicios desplegada en AWS con Serverless Framework. La aplicación permite a los usuarios registrarse, iniciar sesión y publicar mensajes cortos (hasta 140 caracteres).
 
 La arquitectura está compuesta por microservicios independientes para autenticación, gestión de usuarios y publicaciones, utilizando AWS Cognito para la autenticación, DynamoDB para la persistencia y API Gateway para exponer los endpoints.
 
-# 📋 Tabla de contenidos
-Descripción
+## 📋 Tabla de Contenidos
 
-Estructura del proyecto
-
-Arquitectura
-
-Flujo de datos
-
-Endpoints principales
-
-Seguridad
-
-Prerrequisitos
-
-Despliegue
-
-Comandos de verificación
-
-Licencia y autor
+1. [Descripción](#-descripción)
+2. [Estructura del proyecto](#-estructura-del-proyecto-microservicios)
+3. [Arquitectura](#-arquitectura)
+4. [Flujo de datos](#-flujo-de-datos)
+5. [Endpoints principales](#-endpoints-principales)
+6. [Seguridad](#-seguridad)
+7. [Prerrequisitos](#-prerrequisitos)
+8. [Despliegue](#-despliegue)
+9. [Comandos de verificación](#-comandos-de-verificación)
+10. [Licencia y autor](#-licencia-y-autor)
 
 # 📝 Descripción
 StreamApp es una aplicación web que permite a los usuarios publicar y ver mensajes cortos (similar a Twitter). La aplicación está construida con una arquitectura de microservicios, donde cada servicio (auth, user, post) es independiente y se despliega como una función AWS Lambda.
@@ -184,39 +191,20 @@ aws cognito-idp create-user-pool-client \
     --client-name StreamAppWebClient \
     --explicit-auth-flows "ALLOW_USER_PASSWORD_AUTH" "ALLOW_REFRESH_TOKEN_AUTH"
 ```
-Configurar DynamoDB
-La tabla posts se crea automáticamente durante el despliegue del Post Service.
+pruebas fotos:
 
+<img width="1330" height="710" alt="image" src="https://github.com/user-attachments/assets/ad165e30-18ac-4c3e-b8f1-deec7dcac135" />
 
-3💻 Comandos útiles
-Gestión de usuarios Cognito
-```
-bash
-# Listar usuarios
-aws cognito-idp list-users --user-pool-id us-east-1_xxxxxxxxx
+<img width="1298" height="617" alt="image" src="https://github.com/user-attachments/assets/a1917c7e-1f22-4d0d-bc3a-9edcde9a3776" />
 
-# Crear usuario manualmente
-aws cognito-idp sign-up \
-    --client-id xxxxxxxxxxxxxxxxxxxxxxxxxx \
-    --username "usuario@ejemplo.com" \
-    --password "Password123!" \
-    --user-attributes Name=email,Value=usuario@ejemplo.com Name=name,Value="Nombre Usuario"
+<img width="894" height="190" alt="image" src="https://github.com/user-attachments/assets/a7e3aadd-1f65-4ece-9cf0-dc1280322f6a" />
 
-# Confirmar usuario
-aws cognito-idp admin-confirm-sign-up \
-    --user-pool-id us-east-1_xxxxxxxxx \
-    --username "usuario@ejemplo.com"
-```
-Verificar despliegue
-bash
-# Ver logs en tiempo real
-serverless logs -f auth -t
+<img width="792" height="203" alt="image" src="https://github.com/user-attachments/assets/b50df028-9955-44bc-9051-1d034209feb2" />
 
-# Listar funciones desplegadas
-serverless list functions
+<img width="767" height="194" alt="image" src="https://github.com/user-attachments/assets/bc61df67-c07b-4c57-b477-9f3b6e0e2ef9" />
 
-# Información del despliegue
-serverless info
+<img width="501" height="135" alt="image" src="https://github.com/user-attachments/assets/234eb63f-ff55-4b29-84db-71a4babf20bc" />
+
 
 📂 Estructura del proyecto local 
 ```
