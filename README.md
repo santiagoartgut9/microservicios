@@ -40,6 +40,9 @@ La arquitectura está compuesta por microservicios independientes para autentica
 9. [Comandos de verificación](#-comandos-de-verificación)
 10. [Licencia y autor](#-licencia-y-autor)
 
+# Video
+https://youtu.be/MVKW_-U8FgM
+
 # 📝 Descripción
 StreamApp es una aplicación web que permite a los usuarios publicar y ver mensajes cortos (similar a Twitter). La aplicación está construida con una arquitectura de microservicios, donde cada servicio (auth, user, post) es independiente y se despliega como una función AWS Lambda.
 
